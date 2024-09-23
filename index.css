@@ -1,0 +1,108 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.post-container {
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  margin: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+    position: relative;
+    background-color: #fff; /* Cor de fundo do container */
+    border-radius: 8px; /* Arredondamento das bordas, opcional */
+    box-shadow:#121212 0px 0px 10px; /* Efeito da box shadow */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
+    margin: 16px; /* Espaço ao redor do container, opcional */
+    padding: 16px; /* Espaço interno do container, opcional */
+  }
+  
+
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-header>div {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post-image {
+  border: 1px solid black;
+  flex: 1;
+}
+
+.post-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.post-icons {
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-icons>div {
+  display: flex;
+  gap: 10px;
+}
+
+.post-likes {
+  font-size: 14px;
+}
+
+
+
+/* Definição de cores */
+.fa-heart {
+  color: red; /* Cor do ícone quando curtido */
+}
+
+.fa-heart-o {
+  color: gray; /* Cor do ícone quando não curtido */
+}
+
+/* Animação */
+@keyframes likeAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.liked-animation {
+  animation: likeAnimation 0.9s;
+}
+
